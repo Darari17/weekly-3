@@ -1,0 +1,142 @@
+.subscribe {
+  width: 1106px;
+  height: 318px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2563eb;
+  gap: 30px;
+  border-radius: 20px;
+  margin: 50px 0px;
+  position: relative;
+
+  > div:nth-child(1) {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  > div:nth-child(2) {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  > div:nth-child(2) > input:nth-child(1),
+  > div:nth-child(2) > input:nth-child(2) {
+    width: 230px;
+    height: 60px;
+    border-radius: 9px;
+    background-color: #2563eb;
+    border: 1px solid #d4d4d8;
+    padding-left: 30px;
+  }
+
+  > div:nth-child(2) > input:nth-child(1)::placeholder,
+  > div:nth-child(2) > input:nth-child(2)::placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  > div:nth-child(2) > button {
+    background-color: white;
+    width: 230px;
+    height: 60px;
+    border-radius: 9px;
+    color: #1d4ed8;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  > div:nth-child(3) {
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid #ffffff;
+    width: 237px;
+    height: 229px;
+    top: 100px;
+    right: 0px;
+    transform: translate(100px, 140px);
+  }
+}
+
+/* responsiv */
+@media (max-width: 1200px) {
+  .subscribe {
+    width: 100%;
+    min-width: 0;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .subscribe {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 20px 8px;
+    gap: 18px;
+  }
+  .subscribe > div:nth-child(1) {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+  .subscribe > div:nth-child(2) {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .subscribe > div:nth-child(2) > input,
+  .subscribe > div:nth-child(2) > button {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    font-size: 15px;
+  }
+  .subscribe > div:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscribe {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 10px 2px;
+    gap: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  .subscribe > div:nth-child(1) {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .subscribe > div:nth-child(2) {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .subscribe > div:nth-child(2) > input,
+  .subscribe > div:nth-child(2) > button {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .subscribe > div:nth-child(3) {
+    display: none;
+  }
+}

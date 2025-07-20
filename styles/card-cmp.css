@@ -1,0 +1,61 @@
+.card {
+  width: 264px;
+  border-radius: 6px;
+}
+.card > div:nth-child(1) {
+  width: 264px;
+  height: 405px;
+}
+.card > div:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1px;
+  margin: 10px 0 0 0;
+  color: #14142b;
+}
+.card > div:nth-child(3) {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  margin-bottom: 10px;
+  color: #1d4ed8;
+}
+.card > div:nth-child(4) {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 12px;
+
+  > span {
+    background-color: #a0a3bd1a;
+    color: #a0a3bd;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 20px;
+  }
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    min-width: 0;
+  }
+  .card > div:nth-child(1) {
+    width: 100%;
+    height: 220px;
+  }
+  .card > div:nth-child(2) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .card > div:nth-child(3) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .card > div:nth-child(4) > span {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+}

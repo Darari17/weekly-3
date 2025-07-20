@@ -1,0 +1,502 @@
+@import url("../styles/global-cmp.css");
+@import url("../styles/navbar-cmp.css");
+@import url("../styles/footer-cmp.css");
+
+body {
+  background-color: #a0a3bd33;
+}
+
+main {
+  opacity: 0.4;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 30px;
+}
+
+.steps > div:nth-child(2),
+.steps > div:nth-child(4) {
+  max-height: min-content;
+  border-bottom: 1px solid #a0a3bd;
+  border-bottom-style: dashed;
+}
+
+.steps > :not(div:nth-child(2)),
+.steps > :not(div:nth-child(4)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+  width: 56px;
+  height: 70px;
+
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d4ed8;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  div:nth-child(2) {
+    font-size: 12px;
+    width: max-content;
+  }
+}
+
+.steps > div:nth-child(1),
+.steps > div:nth-child(3) {
+  div:nth-child(1) {
+    background-color: #008000;
+    border: none;
+  }
+}
+
+/* ========FORM========== */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: min-content;
+  border-radius: 100px;
+  margin-bottom: 50px;
+}
+
+form section {
+  background-color: white;
+  border: 1px solid black;
+  width: 450px;
+  border-radius: 6px;
+  height: min-content;
+}
+
+/* payment info */
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 25px 30px;
+
+  > div:nth-child(1) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  > div:nth-child(2),
+  > div:nth-child(3),
+  > div:nth-child(4),
+  > div:nth-child(5) {
+    width: 100%;
+    padding: 10px 0px;
+
+    div:nth-child(1) {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      color: #8692a6;
+    }
+
+    div:nth-child(2) {
+      line-height: 26px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+
+  > div:nth-child(6) {
+    width: 100%;
+    padding: 10px;
+
+    div:nth-child(1) {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+    }
+
+    div:nth-child(2) {
+      line-height: 26px;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1d4ed8;
+    }
+  }
+}
+
+/* personal-information */
+.personal-information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0 30px;
+
+  > div:nth-child(1) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  > div:nth-child(2),
+  > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0px;
+    gap: 5px;
+
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.25px;
+      color: #696f79;
+    }
+
+    input {
+      height: 40px;
+      padding-left: 25px;
+    }
+  }
+
+  > div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0px;
+    gap: 5px;
+
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.25px;
+      color: #696f79;
+    }
+
+    input {
+      height: 40px;
+      padding-left: 70px;
+    }
+  }
+
+  > div:nth-child(4)::after {
+    content: "+62";
+    position: absolute;
+    border-right: 1px solid black;
+    border-color: #dedede;
+    padding: 0 10px;
+    font-size: 12px;
+    bottom: 47px;
+    left: 40px;
+    width: 20px;
+    height: 35px;
+    line-height: 35px;
+    transform: translate(7px, 35px);
+    font-weight: 400;
+    color: #4e4b66;
+    font-family: "Mulish";
+  }
+}
+
+/* payment method */
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 25px 30px;
+
+  > div:nth-child(1) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    padding: 10px 0px;
+  }
+
+  > div:nth-child(2) {
+    display: grid;
+    padding: 10px 0px;
+    grid-template-areas:
+      "1 2 3 4"
+      "5 6 7 8";
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: stretch;
+    align-items: stretch;
+
+    button {
+      height: 40px;
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid #dedede;
+      background-color: white;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
+  > div:nth-child(3) {
+    width: 100%;
+    padding: 10px 0px;
+
+    button {
+      height: 40px;
+      width: 100%;
+      border-radius: 4px;
+      color: #f7f7fc;
+      background: #1d4ed8;
+      border: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* modal */
+.modal {
+  /* opacity: 0; */
+  z-index: 1000;
+  position: fixed;
+  pointer-events: none;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  background: white;
+  transition: all 0.4s;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  border: none;
+  height: min-content;
+
+  > div:nth-child(1) {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #14142b;
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    > div:nth-child(1) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+    }
+
+    > div:nth-child(2) {
+      position: relative;
+      left: 40px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.25px;
+    }
+
+    div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #1d4ed8;
+      width: 50px;
+      height: 30px;
+      border-radius: 5px;
+      color: #1d4ed8;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+    }
+  }
+
+  > div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0px;
+
+    > div:nth-child(1) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+    }
+
+    > div:nth-child(2) {
+      font-weight: 700;
+      color: #1d4ed8;
+      font-size: 18px;
+    }
+  }
+
+  > div:nth-child(4) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 0.75px;
+    padding: 10px 0;
+
+    span {
+      color: #d00707;
+    }
+  }
+
+  > div:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    gap: 5px;
+    margin: 10px 0;
+
+    > button {
+      width: 100%;
+      height: 50px;
+      background-color: #1d4ed8;
+      border-radius: 4px;
+      border: none;
+      color: #f7f7fc;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    > a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* responsiv */
+@media (max-width: 900px) {
+  .steps {
+    gap: 8px;
+    margin: 10px 8px;
+  }
+  form section {
+    width: 100%;
+    min-width: 0;
+    padding: 0 8px;
+  }
+  .payment-info,
+  .payment-method,
+  .personal-information {
+    padding: 18px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 2px;
+  }
+  .steps {
+    flex-direction: column;
+    gap: 4px;
+    margin: 8px 2px;
+  }
+  .steps > :not(div:nth-child(2)),
+  .steps > :not(div:nth-child(4)) {
+    width: 40px;
+    height: 50px;
+    gap: 4px;
+  }
+  .steps > :not(div:nth-child(2)) div:nth-child(1),
+  .steps > :not(div:nth-child(4)) div:nth-child(1) {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .steps > :not(div:nth-child(2)) div:nth-child(2),
+  .steps > :not(div:nth-child(4)) div:nth-child(2) {
+    font-size: 10px;
+  }
+  form section {
+    width: 100%;
+    min-width: 0;
+    padding: 0 2px;
+  }
+  .payment-info,
+  .payment-method,
+  .personal-information {
+    padding: 8px 2px;
+  }
+  .payment-method > div:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .modal {
+    padding: 8px 2px;
+    width: 98vw;
+    min-width: 0;
+  }
+  .modal > div:nth-child(1) {
+    font-size: 16px;
+    padding-bottom: 6px;
+  }
+  .modal > div:nth-child(2),
+  .modal > div:nth-child(3) {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .modal > div:nth-child(2) > div,
+  .modal > div:nth-child(3) > div {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .modal > div:nth-child(5) > button,
+  .modal > div:nth-child(5) > a {
+    font-size: 12px;
+    height: 40px;
+  }
+}

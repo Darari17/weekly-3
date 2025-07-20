@@ -1,0 +1,121 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/** navbar */
+nav {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  height: 70px;
+  padding: 0 100px;
+  background-color: white;
+
+  /* logo */
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 51px;
+  }
+
+  /* menu */
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    div:nth-child(1),
+    div:nth-child(2),
+    div:nth-child(3) {
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #0f172a;
+    }
+  }
+
+  /* login register */
+  div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    button:nth-child(1) {
+      width: 70px;
+      height: 40px;
+      border: 1px solid #1d4ed8;
+      color: #1d4ed8;
+      border-radius: 5px;
+    }
+
+    button:nth-child(2) {
+      width: 70px;
+      height: 40px;
+      background: #1d4ed8;
+      border: 1px solid #1d4ed8;
+      color: #f8fafc;
+      border-radius: 5px;
+    }
+  }
+}
+
+/* rensponsiv */
+@media (max-width: 900px) {
+  nav {
+    padding: 0 24px;
+  }
+  nav div:nth-child(2) div {
+    width: 80px;
+    font-size: 13px;
+  }
+  nav div:nth-child(3) button {
+    width: 60px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 8px 8px;
+    gap: 8px;
+  }
+  nav div:nth-child(1) {
+    width: 100px;
+    height: 40px;
+  }
+  nav div:nth-child(2) {
+    flex-direction: column;
+    gap: 4px;
+  }
+  nav div:nth-child(2) div {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+  nav div:nth-child(3) {
+    flex-direction: column;
+    gap: 4px;
+  }
+  nav div:nth-child(3) button {
+    width: 100%;
+    height: 32px;
+    font-size: 12px;
+  }
+}
