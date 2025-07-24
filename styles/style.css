@@ -288,7 +288,7 @@ footer {
 }
 
 /* responsiv */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   main {
     padding: 20px 20px;
   }
@@ -377,5 +377,66 @@ footer {
   .upcoming-movies {
     flex-direction: column;
     gap: 10px;
+  }
+} */
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+
+    & div:nth-child(1) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      & div:nth-child(1) {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0.75px;
+        color: #1d4ed8;
+      }
+
+      & div:nth-child(2) {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 70px;
+        letter-spacing: 1px;
+        color: #121212;
+        height: min-content;
+      }
+
+      & div:nth-child(3) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.75px;
+        color: #a0a3bd;
+      }
+    }
+
+    & div:nth-child(2) {
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: normal;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 40px;
   }
 }

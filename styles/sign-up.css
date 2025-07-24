@@ -400,3 +400,12 @@ form > div:nth-child(5) {
     height: 40px;
   }
 }
+
+.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}

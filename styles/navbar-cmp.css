@@ -4,7 +4,6 @@ body {
   flex-direction: column;
 }
 
-/** navbar */
 nav {
   position: sticky;
   display: flex;
@@ -15,107 +14,123 @@ nav {
   height: 70px;
   padding: 0 100px;
   background-color: white;
-
-  /* logo */
-  div:nth-child(1) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 51px;
-  }
-
-  /* menu */
-  div:nth-child(2) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    div:nth-child(1),
-    div:nth-child(2),
-    div:nth-child(3) {
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      color: #0f172a;
-    }
-  }
-
-  /* login register */
-  div:nth-child(3) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-
-    button:nth-child(1) {
-      width: 70px;
-      height: 40px;
-      border: 1px solid #1d4ed8;
-      color: #1d4ed8;
-      border-radius: 5px;
-    }
-
-    button:nth-child(2) {
-      width: 70px;
-      height: 40px;
-      background: #1d4ed8;
-      border: 1px solid #1d4ed8;
-      color: #f8fafc;
-      border-radius: 5px;
-    }
-  }
 }
 
-/* rensponsiv */
-@media (max-width: 900px) {
-  nav {
-    padding: 0 24px;
-  }
-  nav div:nth-child(2) div {
-    width: 80px;
-    font-size: 13px;
-  }
-  nav div:nth-child(3) button {
-    width: 60px;
-    height: 36px;
-    font-size: 13px;
-  }
+.logo img {
+  width: 130px;
+  height: auto;
 }
 
-@media (max-width: 600px) {
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu div {
+  text-align: center;
+  width: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f172a;
+}
+
+.auth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth button:nth-child(1) {
+  width: 70px;
+  height: 40px;
+  border: 1px solid #1d4ed8;
+  color: #1d4ed8;
+  border-radius: 5px;
+}
+
+.auth button:nth-child(2) {
+  width: 70px;
+  height: 40px;
+  background: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  color: #f8fafc;
+  border-radius: 5px;
+}
+
+.user-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.menu-logout {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+
+.menu-logout.show {
+  display: block;
+}
+
+.btn-logout {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    height: auto;
-    padding: 8px 8px;
-    gap: 8px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0 20px;
   }
-  nav div:nth-child(1) {
-    width: 100px;
-    height: 40px;
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
-  nav div:nth-child(2) {
-    flex-direction: column;
-    gap: 4px;
-  }
-  nav div:nth-child(2) div {
+
+  .menu,
+  .auth {
     width: 100%;
-    font-size: 12px;
+    display: none;
+    flex-direction: column;
     text-align: center;
+    background: #fff;
+    padding: 10px 0;
   }
-  nav div:nth-child(3) {
-    flex-direction: column;
-    gap: 4px;
-  }
-  nav div:nth-child(3) button {
-    width: 100%;
-    height: 32px;
-    font-size: 12px;
+
+  .menu.active,
+  .auth.active {
+    display: flex;
   }
 }
