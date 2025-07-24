@@ -35,3 +35,5 @@ form.addEventListener("submit", (e) => {
   alert("Register berhasil, silakan login");
   window.location.href = "../index.html";
 });
+
+//
