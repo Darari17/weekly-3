@@ -16,6 +16,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/burger.js" defer></script>
+    <script src="./scripts/navbar-profile.js" defer></script>
   </head>
   <body>
     <header>
@@ -24,16 +26,22 @@
           <img src="../assets/logo/logo-tickitz.png" alt="" />
         </div>
 
-        <div>
+        <div class="menu">
           <div><a href="/index.html">Home</a></div>
           <div><a href="/pages/movie.html">Movie</a></div>
           <div><a href="#">Buy Ticket</a></div>
         </div>
 
-        <div>
-          <button><a href="/pages/sign-in.html">Sign In</a></button>
-          <button><a href="/pages/sign-up.html">Sign Up</a></button>
+        <div class="auth">
+          <button class="sign-in" onclick="location='/pages/sign-in.html'">
+            Sign In
+          </button>
+          <button class="sign-up" onclick="location='/pages/sign-up.html'">
+            Sign Up
+          </button>
         </div>
+
+        <div class="burger">☰</div>
       </nav>
     </header>
 
