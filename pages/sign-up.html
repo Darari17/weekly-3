@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/sign-up.css" />
+    <script src="../scripts/sign-up.js" defer></script>
   </head>
   <body>
     <header>
@@ -47,22 +48,24 @@
 
       <form action="">
         <div>
-          <label for="">Email</label>
-          <input type="email" placeholder="Enter your email" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your email" id="email" />
         </div>
 
         <div>
-          <label for="">Password</label>
-          <input type="password" placeholder="Enter your password" />
+          <label for="pwd">Password</label>
+          <input type="password" placeholder="Enter your password" id="pwd" />
         </div>
 
         <div>
-          <label for="">I agree to terms & conditions</label>
-          <input type="checkbox" />
+          <label for="checkbox">I agree to terms & conditions</label>
+          <input type="checkbox" id="checkbox" />
         </div>
 
         <div>
-          <button type="submit">Join For Free Now</button>
+          <button type="submit" class="sign-up-button">
+            Join For Free Now
+          </button>
         </div>
 
         <div>

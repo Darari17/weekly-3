@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/sign-in.css" />
+    <script src="../scripts/sign-in.js" defer></script>
   </head>
   <body>
     <header>
@@ -33,13 +34,13 @@
 
       <form action="">
         <div>
-          <label for="">Email</label>
-          <input type="email" placeholder="Enter your email" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your email" id="email" />
         </div>
 
         <div>
-          <label for="">Password</label>
-          <input type="password" placeholder="Enter your password" />
+          <label for="pwd">Password</label>
+          <input type="password" placeholder="Enter your password" id="pwd" />
         </div>
 
         <div>
@@ -47,7 +48,7 @@
         </div>
 
         <div>
-          <button type="submit">Login</button>
+          <button type="submit" class="sign-in-button">Login</button>
         </div>
       </form>
 
