@@ -1,6 +1,11 @@
 @import url("../styles/global-cmp.css");
 @import url("../styles/navbar-cmp.css");
 @import url("../styles/footer-cmp.css");
+@import url("../styles/payment-modal-cmp.css");
+
+main {
+  position: relative;
+}
 
 body {
   background-color: #a0a3bd33;
@@ -67,7 +72,6 @@ form {
   align-items: center;
   width: 100%;
   height: min-content;
-  border-radius: 100px;
   margin-bottom: 50px;
 }
 
@@ -256,11 +260,7 @@ form section {
     width: 100%;
     padding: 10px 0px;
 
-    a {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+    & .btn-pay {
       height: 40px;
       width: 100%;
       border-radius: 4px;

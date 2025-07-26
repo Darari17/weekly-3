@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/payment.css" />
+    <!-- <script src="../scripts/payment.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -24,16 +25,22 @@
           <img src="../assets/logo/logo-tickitz.png" alt="" />
         </div>
 
-        <div>
-          <div>Home</div>
-          <div>Movie</div>
-          <div>Buy Ticket</div>
+        <div class="menu">
+          <div><a href="/index.html">Home</a></div>
+          <div><a href="/pages/movie.html">Movie</a></div>
+          <div><a href="#">Buy Ticket</a></div>
         </div>
 
-        <div>
-          <button>Sign In</button>
-          <button>Sign Up</button>
+        <div class="auth">
+          <button class="sign-in" onclick="location='/pages/sign-in.html'">
+            Sign In
+          </button>
+          <button class="sign-up" onclick="location='/pages/sign-up.html'">
+            Sign Up
+          </button>
         </div>
+
+        <div class="burger">☰</div>
       </nav>
     </header>
 
@@ -115,11 +122,41 @@
               <button>opo</button>
             </div>
             <div>
-              <a href="../pages/payment-modal.html"> Pay your order </a>
+              <!-- <a href="../pages/payment-modal.html"> Pay your order </a> -->
+              <button class="btn-pay" type="button" onclick="openModal()">
+                Pay your order
+              </button>
             </div>
           </div>
         </section>
       </form>
+      <section class="modal-section">
+        <div class="modal">
+          <div class="modal-header">Payment Info</div>
+
+          <div class="modal-row">
+            <div class="modal-label">No Rekening Virtual:</div>
+            <div class="modal-value">1234567890</div>
+            <button class="copy-btn">Copy</button>
+          </div>
+
+          <div class="modal-row">
+            <div class="modal-label">Total Payment:</div>
+            <div class="modal-amount">$30</div>
+          </div>
+
+          <div class="modal-note">
+            Pay this payment bill before it is due,
+            <span>June 23, 2023</span>. If the bill has not been paid by the
+            specified time, it will be forfeited.
+          </div>
+
+          <div class="modal-actions">
+            <button class="primary-btn">Check Payment</button>
+            <a href="./payment.html" class="secondary-link">Pay Later</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -171,5 +208,12 @@
         <div>© 2020 Tickitz. All Rights Reserved.</div>
       </section>
     </footer>
+    <script>
+      function openModal() {
+        const modal = document.querySelector(".modal-section");
+        modal.style.visibility =
+          modal.style.visibility === "visible" ? "hidden" : "visible";
+      }
+    </script>
   </body>
 </html>
