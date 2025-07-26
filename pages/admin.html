@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin Page" />
+    <title>Admin Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/admin-graph.js" defer></script>
+  </head>
+  <body class="font-[Mulish]">
+    <header>
+      <nav
+        class="flex flex-row sticky top-0 justify-between items-center border-b border-[#dedede] h-[70px] px-[100px] bg-white md:px-[100px]"
+      >
+        <!-- logo -->
+        <div class="flex-1">
+          <img
+            src="../assets/logo/logo-tickitz.png"
+            alt="Logo"
+            class="w-[130px] h-auto"
+          />
+        </div>
+
+        <!-- menu -->
+        <div
+          class="hidden md:flex flex-row flex-1 justify-center items-center gap-[10px]"
+        >
+          <div
+            class="text-center w-[100px] font-normal text-sm leading-5 text-[#0f172a]"
+          >
+            <a href="/index.html">Home</a>
+          </div>
+          <div
+            class="text-center w-[100px] font-normal text-sm leading-5 text-[#0f172a]"
+          >
+            <a href="/pages/movie.html">Movie</a>
+          </div>
+          <div
+            class="text-center w-[100px] font-normal text-sm leading-5 text-[#0f172a]"
+          >
+            <a href="#">Buy Ticket</a>
+          </div>
+        </div>
+
+        <!-- user -->
+        <div
+          class="hidden md:flex flex-row flex-1 items-center justify-end gap-[10px]"
+        >
+          <div>Loaction</div>
+          <img src="../assets/logo/dropdown.svg" alt="" />
+          <img src="../assets/logo/Search.svg" alt="" />
+          <!-- ava -->
+          <div class="relative flex items-center cursor-pointer">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="/assets/img/ava.svg"
+              alt="User"
+            />
+            <!-- logout -->
+            <div
+              class="hidden absolute top-[50px] right-0 bg-white border border-[#dedede] rounded-md py-[10px] px-[15px]"
+            >
+              <button
+                class="border-none text-red-600 cursor-pointer text-sm bg-transparent"
+              >
+                Keluar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- burger -->
+        <div class="block md:hidden text-2xl cursor-pointer z-20">☰</div>
+      </nav>
+
+      <!-- responsif -->
+      <div
+        class="hidden flex-col w-full bg-white border-t border-[#dedede] p-4 md:hidden"
+      >
+        <a href="/index.html" class="py-2 text-center text-[#0f172a]">Home</a>
+        <a href="/pages/movie.html" class="py-2 text-center text-[#0f172a]"
+          >Movie</a
+        >
+        <a href="#" class="py-2 text-center text-[#0f172a]">Buy Ticket</a>
+      </div>
+    </header>
+
+    <main class="mx-[6.25rem] my-[1.5rem]">
+      <div class="relative w-max">
+        <select
+          id="chart-selector"
+          class="px-4 py-2 rounded-md bg-blue-400 text-white cursor-pointer"
+        >
+          <option value="bar">Bar Chart</option>
+          <option value="doughnut">Doughnut Chart</option>
+          <option value="line">Line Chart</option>
+        </select>
+      </div>
+
+      <div id="bar-div" class="flex items-center justify-center">
+        <canvas id="bar-chart"></canvas>
+      </div>
+
+      <div id="doughnut-div" class="flex items-center justify-center hidden">
+        <canvas id="doughnut-chart"></canvas>
+      </div>
+
+      <div id="line-div" class="flex items-center justify-center hidden">
+        <canvas id="line-chart"></canvas>
+      </div>
+    </main>
+  </body>
+</html>
