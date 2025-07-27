@@ -17,6 +17,8 @@
     />
 
     <link rel="stylesheet" href="../styles/home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../scripts/movie.js" defer></script>
   </head>
   <body>
     <header>
@@ -25,16 +27,22 @@
           <img src="../assets/logo/logo-tickitz.png" alt="" />
         </div>
 
-        <div>
-          <div>Home</div>
-          <div>Movie</div>
-          <div>Buy Ticket</div>
+        <div class="menu">
+          <div><a href="/index.html">Home</a></div>
+          <div><a href="/pages/movie.html">Movie</a></div>
+          <div><a href="#">Buy Ticket</a></div>
         </div>
 
-        <div>
-          <button>Sign In</button>
-          <button>Sign Up</button>
+        <div class="auth">
+          <button class="sign-in" onclick="location='/pages/sign-in.html'">
+            Sign In
+          </button>
+          <button class="sign-up" onclick="location='/pages/sign-up.html'">
+            Sign Up
+          </button>
         </div>
+
+        <div class="burger">☰</div>
       </nav>
     </header>
 
@@ -68,147 +76,21 @@
       </section>
 
       <section class="movies">
-        <div class="card">
-          <div>
-            <img src="../assets/card/black-widow.svg" alt="" />
-          </div>
-          <div>Black Widow</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/the-witches.svg" alt="" />
-          </div>
-          <div>The Witches</div>
-          <div></div>
-          <div>
-            <span>Comedy</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/tenet.svg" alt="" />
-          </div>
-          <div>Tenet</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Sci-Fi</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/spiderman.svg" alt="" />
-          </div>
-          <div>Spiderman</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-        <div class="card">
-          <div>
-            <img src="../assets/card/black-widow.svg" alt="" />
-          </div>
-          <div>Black Widow</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/the-witches.svg" alt="" />
-          </div>
-          <div>The Witches</div>
-          <div></div>
-          <div>
-            <span>Comedy</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/tenet.svg" alt="" />
-          </div>
-          <div>Tenet</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Sci-Fi</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/spiderman.svg" alt="" />
-          </div>
-          <div>Spiderman</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-        <div class="card">
-          <div>
-            <img src="../assets/card/black-widow.svg" alt="" />
-          </div>
-          <div>Black Widow</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/the-witches.svg" alt="" />
-          </div>
-          <div>The Witches</div>
-          <div></div>
-          <div>
-            <span>Comedy</span>
-            <span>Adventure</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/tenet.svg" alt="" />
-          </div>
-          <div>Tenet</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Sci-Fi</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <img src="../assets/card/spiderman.svg" alt="" />
-          </div>
-          <div>Spiderman</div>
-          <div></div>
-          <div>
-            <span>Action</span>
-            <span>Adventure</span>
-          </div>
-        </div>
+        <!-- <div class="card">
+                <div class="bg-card">
+                  <button class="bg-card-details"></button>
+                  <button class="bg-card-buy-ticket"></button>
+                </div>
+                <div>
+                  <img src="../assets/card/black-widow.svg" alt="" />
+                </div>
+                <div>Black Widow</div>
+                <div></div>
+                <div>
+                  <span>Action</span>
+                  <span>Adventure</span>
+                </div>
+              </div> -->
       </section>
 
       <section class="paging">
